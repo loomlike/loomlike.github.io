@@ -3,13 +3,15 @@ cd ~
 # clone repo and install the conda env 
 git clone https://www.github.com/microsoft/computervision 
 # change permission as we copy this into each user's folder
-chmod -R ugo+rwx /root/computervision
+chmod -R uvi shgo+rwx /root/computervision
+
+source /data/anaconda/etc/profile.d/conda.sh
 conda env create -f /root/computervision/environment.yml --name cv
 conda activate cv 
 python -m ipykernel install --name cv --display-name "MLADS CV LAB" 
 
 # add the 5 users to jupyterhub
-echo 'c.Authenticator.whitelist = {"mlads0", "mlads1", "mlads2", "mlads3", "mlads4"}' | sudo tee -a /etc/jupyterhub/jupyterhub_config.py
+echo 'c.Authenticator.whitelist = {"mlads1", "mlads2", "mlads3", "mlads4", "mlads5"}' | sudo tee -a /etc/jupyterhub/jupyterhub_config.py
 
 # create the users to the vm 
 for i in {1..5}
