@@ -3,7 +3,7 @@ cd ~
 # clone repo and install the conda env 
 git clone https://www.github.com/microsoft/computervision 
 # change permission as we copy this into each user's folder
-chmod -R uvi shgo+rwx /root/computervision
+chmod -R ugo+rwx /root/computervision
 
 source /data/anaconda/etc/profile.d/conda.sh
 conda env create -f /root/computervision/environment.yml --name cv
