@@ -1,3 +1,5 @@
+cd ~
+
 # clone repo and install the conda env 
 git clone https://www.github.com/microsoft/computervision 
 # change permission as we copy this into each user's folder
