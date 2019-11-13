@@ -4,8 +4,7 @@ cd ~
 git clone https://www.github.com/microsoft/computervision 
 # change permission as we copy this into each user's folder
 chmod -R ugo+rwx /root/computervision
-cd computervision 
-conda env create -f environment.yml --name cv
+conda env create -f /root/computervision/environment.yml --name cv
 conda activate cv 
 python -m ipykernel install --name cv --display-name "MLADS CV LAB" 
 
